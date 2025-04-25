@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <title>Um.. What's Going On??</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+
+<body style="background-image:url(https://i.pinimg.com/736x/7a/64/2b/7a642b9f5d81960a4baa8da87a54ed4f.jpg); background-repeat: no-repeat; background-size: cover; font-family: 'Times New Roman', Times, serif;
+    "class="flex justify-center h-screen items-center font-semibold">
+    <div class="border border-4 border-green-200 bg-white shadow-lg shadow-green-200 p-4 rounded-xl justify-center m-1">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2FsZXlzcDFucjU2M3d1ZDc2YzBjYmd5MTlwdDJlYXZiMmcwZjBlZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/dDFPsSRtmyW0SYQSGS/giphy.gif" alt="" class="md-1">
+        <h1 class="font-bold text-slate-800 text-3xl text-center" id="kalimat">Today is ur birthday? 🤔</h1>
+    <div class="mt-3 text-white text-center justify-center flex gap-3">
+        <button onclick="yeaDitekan()" class="bg-green-400 px-5 py-1 text-2xl rounded w-30" id="tombolyea">Yea</button>
+        <a href="B-Day2.html">
+        <button onclick="yesDitekan()" class="bg-red-400 px-5 py-1 text-2xl rounded w-30">Yes</button>
+        </a>
+
+    </div>
+    
+    <script>
+        let tombolyea = document.getElementById("tombolyea")
+        let Listkalimat = ["Try Again!", "Oh Really?", "Try The Other One "];
+        let kalimat = document.getElementById("kalimat");
+        function yeaDitekan() {
+            kalimatRandom = Math.floor(Math.random()* Listkalimat.length);
+            kalimat.innerHTML = Listkalimat[kalimatRandom];
+            tombolyea.style.position = "absolute";
+            let angkaRandom = Math.floor(Math.random()* document.documentElement.clientWidth);
+            let angkaRandom2 = Math.floor(Math.random()* document.documentElement.clientHeight);
+            tombolyea.style.left = angkaRandom + "px";
+            tombolyea.style.top = angkaRandom2 + "px";
+        }
+        function yesDitekan() {
+           
+        }
+    </script>
+</body>
+
+</html>
